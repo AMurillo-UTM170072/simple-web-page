@@ -1,0 +1,18 @@
+.form-container{
+    width: 20vw;
+    height: 15vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.form-container .form-item-label{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container .form-item-input{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+
+}
