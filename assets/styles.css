@@ -1,3 +1,11 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
 .principal-container{
     display: flex;
 }
@@ -11,6 +19,7 @@
     width: 100%;
     height: 50vh;
 }
+
 
 .principal-container .row-class{
     width: 100%;
@@ -97,4 +106,87 @@
     text-align: center;
     border-radius: 10px;
     margin: 20px;
+}
+
+/* =======================
+   Responsive Media Queries
+   ======================= */
+
+/* Tablets (≤ 900px) */
+@media (max-width: 900px) {
+  .principal-container,
+  .content-container .row-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .principal-container .row-class,
+  .content-container .row-container {
+    flex-direction: column;
+  }
+
+  .principal-container .col-class,
+  .principal-container .row-class .col-image,
+  .principal-container .row-class .col-nav {
+    width: 100vw;
+    text-align: center;
+    align-items: center;
+  }
+
+  .content-container .row-container .col-container,
+  .content-container .row-container .card-container .card-item {
+    width: 90vw;
+    height: auto;
+    margin: 10px auto;
+  }
+
+  .content-container .row-container .col-container .proyect-section {
+    width: 100%;
+  }
+}
+
+/* Phones (≤ 600px) */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+
+  .blank-container,
+  .content-container {
+    height: auto;
+    min-height: 30vh;
+  }
+
+  .principal-container .row-class .col-image .image-container {
+    width: 40vw;
+    height: 10vh;
+    margin: 0 auto;
+  }
+
+  .principal-container .row-class .col-nav .nav-container {
+    text-align: center;
+    font-size: 1.1em;
+  }
+
+  .content-container .row-container .col-container,
+  .content-container .row-container .card-container .card-item {
+    width: 95vw;
+    min-height: 20vh;
+    margin: 8px auto;
+    font-size: 1em;
+  }
+
+  .content-container .row-container .col-container .proyect-section {
+    font-size: 1em;
+    padding: 8px;
+  }
+
+  .content-container .row-container .col-container 
+  .row-container-experience .col-container-experience {
+    width: 90vw;
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 0;
+  }
 }
